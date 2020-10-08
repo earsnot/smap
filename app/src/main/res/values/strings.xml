@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Rooms</string>
+    <string name="last_name_hint">Write last name</string>
+    <string name="last_name">Last name</string>
+    <string name="first_name_hint">Write your first name</string>
+    <string name="first_name">First name</string>
+    <string name="img_desc">hej</string>
+    <string name="add">Add</string>
+    <string name="cancel">Cancel</string>
+</resources>
