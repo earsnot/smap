@@ -7,27 +7,25 @@
     android:background="@color/colorPrimary"
     tools:context=".MainActivity">
 
-    <ImageView
-        android:id="@+id/imgMainHeader"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:contentDescription="@string/img_desc"
+    <TextView
+        android:id="@+id/txtMain"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/edtFirstName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/edtFirstName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/colorText"
         android:autofillHints=""
         android:ems="10"
         android:hint="@string/first_name_hint"
         android:inputType="textPersonName"
         android:text="@string/first_name"
+        android:textColor="@color/colorText"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -37,41 +35,54 @@
         android:id="@+id/edtLastName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:textColor="@color/colorText"
         android:autofillHints=""
         android:ems="10"
         android:hint="@string/last_name_hint"
         android:inputType="textPersonName"
         android:text="@string/last_name"
+        android:textColor="@color/colorText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edtFirstName" />
+
+    <EditText
+        android:id="@+id/edtSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/last_name_hint"
+        android:inputType="textPersonName"
+        android:text="@string/search"
+        android:textColor="@color/colorText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtLastName" />
 
     <Button
         android:id="@+id/btnAdd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:background="@color/colorPrimaryDark"
-        android:textColor="@color/colorText"
-        android:layout_marginTop="8dp"
         android:text="@string/add"
-        app:layout_constraintEnd_toEndOf="@+id/edtLastName"
-        app:layout_constraintTop_toBottomOf="@+id/edtLastName" />
+        android:textColor="@color/colorText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/edtSearch"
+        app:layout_constraintTop_toBottomOf="@+id/edtSearch" />
 
     <Button
-        android:id="@+id/btnCancel"
+        android:id="@+id/btnSearch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:background="@color/colorPrimaryDark"
+        android:text="@string/search"
         android:textColor="@color/colorText"
         android:textStyle="bold"
-        android:layout_marginTop="8dp"
-        android:text="@string/cancel"
-        app:layout_constraintEnd_toStartOf="@+id/btnAdd"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/edtLastName"
-        app:layout_constraintTop_toBottomOf="@+id/edtLastName" />
+        app:layout_constraintEnd_toEndOf="@+id/edtSearch"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtSearch" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -23,6 +23,10 @@ public class Repository {
         executor = Executors.newSingleThreadExecutor();
         persons = db.personDAO().getAll();
     }
+    public LiveData<List<Person>> getPersons() {
+        return persons;
+    }
+
     // only for demo purposes - always use asynch methods for network actions etc
     public Person getPerson(int uid) {
         return db.personDAO().findPerson(uid);
@@ -44,6 +48,9 @@ public class Repository {
         return db.personDAO().findPersons(name);
     }
 
+    public void deleteAll(List<Person> personsToDelete){
+        db.personDAO().deleteAll(personsToDelete);
+    }
     //async methods
 
     public Person getPersonAsync(final int uid) {
@@ -60,6 +67,7 @@ public class Repository {
         } catch (ExecutionException e) {
             e.printStackTrace();
         }
+        return null;
     }
 
     public void updatePersonAsync(final Person person) {
